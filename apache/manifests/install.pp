@@ -1,11 +1,12 @@
-class apache::install {
-    # resourcapache::uninstall
-    $pack_name = $facts['os']['family'] ? {
-    'RedHat' => 'httpd'
-    'Debian' => 'apache2'
+# Class: apache::install inherits apache::params
+#
+#
+class apache::install inherits apache::params {
+    # resources
+
+
+   package { $pack_name:
+       ensure => installed,
+       
 }
-  package { $pack_name:
-      ensure => installed,
-      
-  }
-}
+}   
