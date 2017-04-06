@@ -5,7 +5,7 @@ class apache::install inherits apache::params {
     # resources
 
 
-   package { $pack_name:
+   package { $apache::params::pack_name:
        ensure => installed,
        
 }

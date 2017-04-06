@@ -3,9 +3,9 @@
 #
 class apache::homepage inherits apache::params {
  
- file { '/var/www/index.html':
+ file { '/var/www//html/index.html':
      ensure => files,
-     content => file('apache/index.html')
+     content => file('apache/index.html'),
      notify => Service["${apache::params::pack_name}"]
      #source => 'puppet:///modules/class/file.txt';
  }
