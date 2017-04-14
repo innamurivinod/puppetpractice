@@ -1,7 +1,7 @@
-# Class: paramclass
+# Class: serverpractice
 # ===========================
 #
-# Full description of class paramclass here.
+# Full description of class serverpractice here.
 #
 # Parameters
 # ----------
@@ -28,7 +28,7 @@
 # --------
 #
 # @example
-#    class { 'paramclass':
+#    class { 'serverpractice':
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
@@ -42,9 +42,7 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class paramclass {
-class { 'paramclass::deploy' : 
- decisionVariables => 1,
- }
+class serverpractice {
+include serverpractice::java
 
 }
